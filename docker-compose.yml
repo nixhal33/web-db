@@ -13,8 +13,10 @@ services:
     ports:
       - "${HOST_PORT:-3000}:3000"
     volumes:
-      - app_data:/app/data
-      - app_uploads:/app/static/uploads
+#      - app_data:/app/data
+#      - app_uploads:/app/static/uploads
+      - ./volume_data:/app/data
+      - ./volume_uploads:/app/static/uploads
     restart: unless-stopped
 
 volumes:
