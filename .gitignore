@@ -50,3 +50,4 @@ yarn-error.log*
 *.7z
 *.bak
 dump.sql
+.env

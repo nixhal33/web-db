@@ -1,0 +1,22 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: web-db:local
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      PORT: ${PORT:-3000}
+      DATABASE_URL: ${DATABASE_URL:-sqlite:///data/app.sqlite3}
+    ports:
+      - "${HOST_PORT:-3000}:3000"
+    volumes:
+      - app_data:/app/data
+      - app_uploads:/app/static/uploads
+    restart: unless-stopped
+
+volumes:
+  app_data:
+  app_uploads:

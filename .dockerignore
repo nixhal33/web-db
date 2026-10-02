@@ -1,0 +1,20 @@
+.git
+.gitignore
+.env
+.venv
+venv
+env
+__pycache__
+*.py[cod]
+*.sqlite3
+*.db
+data
+static/uploads
+backup
+templates copy
+static copy
+.agents
+.codex
+README.md
+CHANGELOG.md
+LICENCE.md
