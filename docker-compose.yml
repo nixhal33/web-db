@@ -20,5 +20,7 @@ services:
     restart: unless-stopped
 
 volumes:
-  app_data:
-  app_uploads:
+#  app_data:
+#  app_uploads:
+   volume_data:
+   volume_uploads:
